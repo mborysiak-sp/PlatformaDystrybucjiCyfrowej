@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<products>
+    <games>
+        <game>
+            <name>Skyrim 1: Arena</name>
+        </game>
+        <game>
+            <name>Skyrim 2: Daggerfall</name>
+        </game>
+        <game>
+            <name>Skyrim 3: Morrowind</name>
+        </game>
+        <game>
+            <name>Skyrim 4: Oblivion</name>
+        </game>
+        <game>
+            <name>Skyrim 5: Widełorecenzja</name>
+        </game>
+    </games>
+    <films>
+        <film>
+            <name>Bóg nie umarł</name>
+        </film>
+        <film>
+            <name>Bóg nie umarł 2 Electric Boogaloo</name>
+        </film>
+        <film>
+            <name>Bóg nie umarł 3 </name>
+        </film>
+        <film>
+            <name>Pitbull. Niebezpieczne Kobiety</name>
+        </film>
+        <film>
+            <name>Smerfy: Poszukiwacze zaginionej wioski</name>
+        </film>
+    </films>
+    <e-books>
+        <e-book>
+            <name>Таня Гроттер и Золотая Пиявка</name>
+        </e-book>
+        <e-book>
+            <name>Таня Гроттер и магический контрабас</name>
+        </e-book>
+        <e-book>
+            <name>Таня Гроттер и Исчезающий Этаж </name>
+        </e-book>
+    </e-books>
+    <music>
+        <album>
+            <name>W dzień triumfu nad złem</name>
+        </album>
+        <album>
+            <name>Stal zemsty</name>
+        </album>
+        <album>
+            <name>Ogień ostatniej bitwy/The Fire of the Final Battle</name>
+        </album>
+    </music>
+</products>
