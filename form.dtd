@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!ELEMENT products (games|films|e-books|music)*>
+        <!ELEMENT games (game)*>
+        <!ELEMENT game (name|price|publisher|developer|categories)*>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT price (#PCDATA)>
+        <!ATTLIST price
+                currency CDATA #IMPLIED
+                currencys CDATA #IMPLIED>
+        <!ELEMENT publisher (#PCDATA)>
+        <!ELEMENT developer (#PCDATA)>
+        <!ELEMENT categories (category)*>
+        <!ELEMENT category (#PCDATA)>
+        <!ELEMENT films (film)*>
+        <!ELEMENT film (name|price|director|distributor|length|genres)*>
+        <!ELEMENT director (#PCDATA)>
+        <!ELEMENT distributor (#PCDATA)>
+        <!ELEMENT length (#PCDATA)>
+        <!ATTLIST length
+                unit CDATA #REQUIRED>
+        <!ELEMENT genres (genre)*>
+        <!ELEMENT genre (#PCDATA)>
+        <!ELEMENT e-books (e-book)*>
+        <!ELEMENT e-book (name|price|author|pages|genres)*>
+        <!ELEMENT author (#PCDATA)>
+        <!ELEMENT pages (#PCDATA)>
+        <!ELEMENT music (album)*>
+        <!ELEMENT album (name|price|artist|length|genres)*>
+        <!ELEMENT artist (#PCDATA)>
