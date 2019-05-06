@@ -4,9 +4,7 @@
         <!ELEMENT game (name|price|publisher|developer|categories)*>
         <!ELEMENT name (#PCDATA)>
         <!ELEMENT price (#PCDATA)>
-        <!ATTLIST price
-                currency CDATA #IMPLIED
-                currencys CDATA #IMPLIED>
+        <!ATTLIST price currency CDATA #IMPLIED>
         <!ELEMENT publisher (#PCDATA)>
         <!ELEMENT developer (#PCDATA)>
         <!ELEMENT categories (category)*>
@@ -16,8 +14,7 @@
         <!ELEMENT director (#PCDATA)>
         <!ELEMENT distributor (#PCDATA)>
         <!ELEMENT length (#PCDATA)>
-        <!ATTLIST length
-                unit CDATA #REQUIRED>
+        <!ATTLIST length unit CDATA #REQUIRED>
         <!ELEMENT genres (genre)*>
         <!ELEMENT genre (#PCDATA)>
         <!ELEMENT e-books (e-book)*>
