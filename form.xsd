@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="products" type="productsType"/>
+  <xs:complexType name="priceType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="currency" use="optional"/>
+        <xs:attribute type="xs:string" name="currencys" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>  <xs:complexType name="categoriesType">
+  <xs:sequence>
+    <xs:element name="category" maxOccurs="unbounded" minOccurs="0">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="FPS"/>
+          <xs:enumeration value="RPG"/>
+          <xs:enumeration value="RTS"/>
+          <xs:enumeration value="4X"/>
+          <xs:enumeration value="Strategy"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:element>
+  </xs:sequence>
+</xs:complexType>
+  <xs:complexType name="gameType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Skyrim 1: Arena"/>
+            <xs:enumeration value="Skyrim 2: Daggerfall"/>
+            <xs:enumeration value="Skyrim 3: Morrowind"/>
+            <xs:enumeration value="Skyrim 4: Oblivion"/>
+            <xs:enumeration value="Skyrim 5: Widełorecenzja"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="priceType" name="price"/>
+      <xs:element name="publisher">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Bethesda"/>
+            <xs:enumeration value="KlocuchVideos"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="developer">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Bethesda"/>
+            <xs:enumeration value="Klocuch"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="categoriesType" name="categories"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gamesType">
+    <xs:sequence>
+      <xs:element type="gameType" name="game" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="lengthType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="unit" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="genresType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="genre" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="filmType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Bóg nie umarł"/>
+            <xs:enumeration value="Bóg nie umarł 2 Electric Boogaloo"/>
+            <xs:enumeration value="Bóg jednak umarł"/>
+            <xs:enumeration value="Pitbull. Niebezpieczni Mężczyźni"/>
+            <xs:enumeration value="Smerfy: Poszukiwacze zaginionej wioski"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="priceType" name="price"/>
+      <xs:element name="director">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Peter Jackson"/>
+            <xs:enumeration value="Steven Spielberg"/>
+            <xs:enumeration value="Fryderyk Nicowski"/>
+            <xs:enumeration value="Patrick Vegas"/>
+            <xs:enumeration value="James Gargamel"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="distributor">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Universal"/>
+            <xs:enumeration value="Zarathustra"/>
+            <xs:enumeration value="Vegas Productions"/>
+            <xs:enumeration value="Cauldron Productions"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="lengthType" name="length"/>
+      <xs:element type="genresType" name="genres"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="filmsType">
+    <xs:sequence>
+      <xs:element type="filmType" name="film" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="e-bookType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Таня Гроттер и Золотая Пиявка"/>
+            <xs:enumeration value="Wiedźmin: Powrót Vesemira"/>
+            <xs:enumeration value="Harri Potta"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="priceType" name="price"/>
+      <xs:element name="author">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="J.K. Rowling"/>
+            <xs:enumeration value="Andrew Sapkowsky"/>
+            <xs:enumeration value="J.K. Rowlong"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="pages">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="100"/>
+            <xs:enumeration value="200"/>
+            <xs:enumeration value="416"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="genresType" name="genres"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="e-booksType">
+    <xs:sequence>
+      <xs:element type="e-bookType" name="e-book" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="albumType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="W dzień triumfu nad złem"/>
+            <xs:enumeration value="The Satanist"/>
+            <xs:enumeration value="First and Last and Always"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="priceType" name="price"/>
+      <xs:element name="artist">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Honor"/>
+            <xs:enumeration value="Behemoth"/>
+            <xs:enumeration value="Sisters of Mercy"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="lengthType" name="length"/>
+      <xs:element type="genresType" name="genres"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="musicType">
+    <xs:sequence>
+      <xs:element type="albumType" name="album" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="productsType">
+    <xs:sequence>
+      <xs:element type="gamesType" name="games"/>
+      <xs:element type="filmsType" name="films"/>
+      <xs:element type="e-booksType" name="e-books"/>
+      <xs:element type="musicType" name="music"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

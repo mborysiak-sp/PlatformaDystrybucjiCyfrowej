@@ -1,0 +1,79 @@
+games {
+    float: left;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    margin: 10px;
+    background-color:pink;
+}
+game {
+    margin: 5px;
+    display: block;
+    border-style: solid;
+    border-width: thin;
+    border-color: red;
+}
+game:hover {
+    background-color: beige;
+}
+album:hover {
+    background-color: blue;
+}
+e-book:hover {
+    background-color: orange;
+}
+film:hover {
+    background-color: orangered;
+}
+films {
+    float: left;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    margin: 10px;
+    background-color:greenyellow;
+}
+film {
+    margin: 5px;
+    display: block;
+    border-style: solid;
+    border-width: thin;
+    border-color: red;
+}
+e-books {
+    float: left;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    margin: 10px;
+    background-color:blueviolet;
+}
+e-book {
+    margin: 5px;
+    display: block;
+    border-style: solid;
+    border-width: thin;
+    border-color: red;
+}
+music {
+    float: left;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    margin: 10px;
+    background-color:rosybrown;
+}
+album {
+    margin: 5px;
+    display: block;
+    border-style: solid;
+    border-width: thin;
+    border-color: red;
+}
+price {
+    font-size: 10px;
+    display:block;
+}
+price:before {
+    content: "price ";
+}
