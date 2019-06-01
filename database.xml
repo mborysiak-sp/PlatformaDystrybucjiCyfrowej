@@ -8,49 +8,49 @@
             <price currency="euro">14,88</price>
             <publisher>Bethesda</publisher>
             <developer>Bethesda</developer>
-            <categories>
-                <category>FPS</category>
-                <category>RPG</category>
-            </categories>
+            <genres>
+                <genre>FPS</genre>
+                <genre>RPG</genre>
+            </genres>
         </game>
         <game>
             <name>Skyrim 2: Daggerfall</name>
             <price currency="euro">14,88</price>
             <publisher>Bethesda</publisher>
             <developer>Bethesda</developer>
-            <categories>
-                <category>RTS</category>
-                <category>RPG</category>
-            </categories>
+            <genres>
+                <genre>RTS</genre>
+                <genre>RPG</genre>
+            </genres>
         </game>
         <game>
             <name>Skyrim 3: Morrowind</name>
             <price currency="euro">1488</price>
             <publisher>Bethesda</publisher>
             <developer>Bethesda</developer>
-            <categories>
-                <category>FPS</category>
-                <category>RPG</category>
-            </categories>
+            <genres>
+                <genre>FPS</genre>
+                <genre>RPG</genre>
+            </genres>
         </game>
         <game>
             <name>Skyrim 4: Oblivion</name>
             <price currency="euro">21,37</price>
             <publisher>Bethesda</publisher>
             <developer>Bethesda</developer>
-            <categories>
-                <category>RTS</category>
-            </categories>
+            <genres>
+                <genre>RTS</genre>
+            </genres>
         </game>
         <game>
             <name>Skyrim 5: Widełorecenzja</name>
             <price currency="euro">14,88</price>
             <publisher>KlocuchVideos</publisher>
             <developer>Klocuch</developer>
-            <categories>
-                <category>4X</category>
-                <category>Strategy</category>
-            </categories>
+            <genres>
+                <genre>4X</genre>
+                <genre>Strategy</genre>
+            </genres>
         </game>
     </games>
     <films>

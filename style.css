@@ -1,3 +1,6 @@
+products {
+    counter-reset: section;
+}
 games {
     float: left;
     border-style: solid;
@@ -5,6 +8,10 @@ games {
     border-color: black;
     margin: 10px;
     background-color:pink;
+}
+game::before {
+    counter-increment: section;
+    content: "AUTOMATYCZNE NUMEROWANIE ZA POMOCĄ CSS(MÓJ ORYGINALNY POMYSŁ)" counter(section) ": ";
 }
 game {
     margin: 5px;

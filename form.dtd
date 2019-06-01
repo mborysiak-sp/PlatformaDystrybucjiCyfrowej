@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-        <!ELEMENT products (games|films|e-books|music)*>
+        <!ENTITY % g "(name|price|publisher|developer|categories)*">
+        <!ENTITY % include "INCLUDE">
+        <!ENTITY % ignore "IGNORE">
+        <![%ignore;[
+                <!ELEMENT products (games|films|music)*>
+                ]]>
+        <![%include;[
+                <!ELEMENT products (games|films|e-books|music)*>
+                ]]>
         <!ELEMENT games (game)*>
-        <!ELEMENT game (name|price|publisher|developer|categories)*>
+        <!ELEMENT game %g;>
         <!ELEMENT name (#PCDATA)>
         <!ELEMENT price (#PCDATA)>
         <!ATTLIST price currency CDATA #IMPLIED>
@@ -24,3 +32,4 @@
         <!ELEMENT music (album)*>
         <!ELEMENT album (name|price|artist|length|genres)*>
         <!ELEMENT artist (#PCDATA)>
+
