@@ -5,7 +5,7 @@
     <games>
         <game>
             <name>Skyrim 1: Arena</name>
-            <price currency="euro">14,88</price>
+            <price currency="euro">18</price>
             <publisher>Bethesda</publisher>
             <developer>Bethesda</developer>
             <genres>
@@ -15,7 +15,7 @@
         </game>
         <game>
             <name>Skyrim 2: Daggerfall</name>
-            <price currency="euro">14,88</price>
+            <price currency="euro">14</price>
             <publisher>Bethesda</publisher>
             <developer>Bethesda</developer>
             <genres>
@@ -35,7 +35,7 @@
         </game>
         <game>
             <name>Skyrim 4: Oblivion</name>
-            <price currency="euro">21,37</price>
+            <price currency="euro">21</price>
             <publisher>Bethesda</publisher>
             <developer>Bethesda</developer>
             <genres>
@@ -44,7 +44,7 @@
         </game>
         <game>
             <name>Skyrim 5: Widełorecenzja</name>
-            <price currency="euro">14,88</price>
+            <price currency="euro">37</price>
             <publisher>KlocuchVideos</publisher>
             <developer>Klocuch</developer>
             <genres>
