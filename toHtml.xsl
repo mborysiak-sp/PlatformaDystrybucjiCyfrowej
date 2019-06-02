@@ -6,36 +6,38 @@
             &lt;meta charset="utf-8"/>
         </xsl:text>
         <html>
+            <head>
+                <title>HTML generated</title>
+                <link rel="stylesheet" href="style.css"/>
+            </head>
             <body>
-                <h1>
-                    Gry Bethesdy:
-                </h1>
-                <table>
-                    <xsl:for-each select="/products/games/game[developer = 'Bethesda']">
-                        <xsl:sort select="price" order="descending" data-type="number"/>
-                        <xsl:choose>
-                            <xsl:when test="position() mod 2 = 1">
-                                <tr style = "background-color:green">
-                                    <td>
+                <div class="main">
+                    <h1>
+                        Gry Bethesdy:
+                    </h1>
+                    <table id = "info">
+                        <xsl:for-each select="/products/games/game[developer = 'Bethesda']">
+                            <xsl:sort select="price" order="descending" data-type="number"/>
+                            <xsl:choose>
+                                <xsl:when test="position() mod 2 = 1">
+                                    <tr id="odd">
+                                        <td>
                                         <xsl:text>
                                             Nazwa:
                                         </xsl:text>
-                                        <nazwa>
-                                            <xsl:value-of select="name"/>
-                                        </nazwa>
-                                    </td>
-                                    <td>
-                                        <xsl:text>
-                                            Cena:
-                                        </xsl:text>
-                                        <price>
-                                            <xsl:value-of select="price"/>
-                                        </price>
-                                    </td>
-                                </tr>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                    <tr style = "background-color:red">
+                                            <nazwa>
+                                                <xsl:value-of select="name"/>
+                                            </nazwa>
+                                        </td>
+                                        <td>
+                                            <price>
+                                                <xsl:value-of select="price"/>
+                                            </price>
+                                        </td>
+                                    </tr>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <tr id="even">
                                         <td>
                                             <xsl:text>
                                                 Nazwa:
@@ -45,38 +47,46 @@
                                             </nazwa>
                                         </td>
                                         <td>
-                                            <xsl:text>
-                                                Cena:
-                                            </xsl:text>
                                             <price>
                                                 <xsl:value-of select="price"/>
                                             </price>
                                         </td>
                                     </tr>
-                            </xsl:otherwise>
-                        </xsl:choose>
-                    </xsl:for-each>
-                </table>
-                <table>
-                    <tr>
-                        <th>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:for-each>
+                    </table>
+                    <table class="calculations">
+                        <tr>
+                            <th>
                             <xsl:text>
                                 Ceny wszystkich gier:
                             </xsl:text>
-                        </th>
-                        <td>
-                            <xsl:value-of select="sum(/products/games/game/price)"/>
-                        </td>
-                        <th>
+                            </th>
+                            <td>
+                                <xsl:value-of select="sum(/products/games/game/price)"/>
+                            </td>
+                            <th>
                             <xsl:text>
                                 Średnia cen Bethesdy:
                             </xsl:text>
+                            </th>
+                                <td>
+                                    <xsl:value-of
+                                            select="format-number(sum(/products/games/game[developer = 'Bethesda']/price) div count(/products/games/game/price), '#.##')"/>
+                                </td>
+                            <th>
+                            <xsl:text>
+                                Liczba gier Bethesdy:
+                            </xsl:text>
+                            </th>
                             <td>
-                                <xsl:value-of select="format-number(sum(/products/games/game[developer = 'Bethesda']/price) div count(/products/games/game/price), '#.##')"/>
+                                <xsl:value-of
+                                        select="count(/products/games/game[developer = 'Bethesda'])"/>
                             </td>
-                        </th>
-                    </tr>
-                </table>
+                        </tr>
+                    </table>
+                </div>
             </body>
         </html>
     </xsl:template>
