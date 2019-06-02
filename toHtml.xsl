@@ -5,6 +5,9 @@
             &lt;!DOCTYPE html>
             &lt;meta charset="utf-8"/>
         </xsl:text>
+        <xsl:comment>
+            Całkiem przydatny komentarz
+        </xsl:comment>
         <html>
             <head>
                 <title>HTML generated</title>
@@ -23,7 +26,7 @@
                                     <tr id="odd">
                                         <td>
                                         <xsl:text>
-                                            Nazwa:
+                                            Name:
                                         </xsl:text>
                                             <nazwa>
                                                 <xsl:value-of select="name"/>
@@ -40,7 +43,7 @@
                                     <tr id="even">
                                         <td>
                                             <xsl:text>
-                                                Nazwa:
+                                                Name:
                                             </xsl:text>
                                             <nazwa>
                                                 <xsl:value-of select="name"/>
@@ -83,6 +86,19 @@
                             <td>
                                 <xsl:value-of
                                         select="count(/products/games/game[developer = 'Bethesda'])"/>
+                            </td>
+                            <xsl:comment>
+                                czy liczba gier jest większa niż 4
+                            </xsl:comment>
+                            <th>
+                                czy liczba gier jest większa niż 4
+                            </th>
+                            <td>
+                                <xsl:if test="count(/products/games/game) &gt; 4">
+                            <xsl:text>
+                                Gier jest więcej niż 4
+                            </xsl:text>
+                                </xsl:if>
                             </td>
                         </tr>
                     </table>
