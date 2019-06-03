@@ -6,9 +6,11 @@
                 <!ELEMENT products (games|films|music)*>
                 ]]>
         <![%include;[
-                <!ELEMENT products (games|films|e-books|music)*>
+                <!--dodalem znak zapytania-->
+                <!ELEMENT products (games|films|e-books?|music)*>
                 ]]>
-        <!ELEMENT games (game)*>
+        <!--dodalem plusa-->
+        <!ELEMENT games (game+)>
         <!ELEMENT game %g;>
         <!ELEMENT name (#PCDATA)>
         <!ELEMENT price (#PCDATA)>
@@ -18,7 +20,8 @@
         <!ELEMENT categories (category)*>
         <!ELEMENT category (#PCDATA)>
         <!ELEMENT films (film)*>
-        <!ELEMENT film (name|price|director|distributor|length|genres)*>
+        <!--dodalem przecinek-->
+        <!ELEMENT film (name,price,director,distributor,length,genres)>
         <!ELEMENT director (#PCDATA)>
         <!ELEMENT distributor (#PCDATA)>
         <!ELEMENT length (#PCDATA)>

@@ -3,33 +3,35 @@
   <xs:element name="products" type="products"/>
   <xs:complexType name="price">
     <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute type="xs:double" name="currency" use="optional"/>
+      <xs:extension base="xs:double">
+        <xs:attribute type="xs:string" name="currency" use="optional"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:complexType name="length">
     <xs:simpleContent>
-      <xs:extension base="xs:string">
+      <!--Dodałem nowy typ-->
+      <xs:extension base="xs:nonNegativeInteger">
         <xs:attribute type="xs:string" name="unit" use="optional"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
 
   <xs:complexType name="products">
-    <xs:sequence>
+    <!--Dodałem alla-->
+    <xs:all>
       <xs:element name="games" type = "games" minOccurs="1"/>
       <xs:element name="films" type = "films" minOccurs="1"/>
       <xs:element name="e-books" type = "e-books" minOccurs="1"/>
       <xs:element name="music" type = "music" minOccurs="1"/>
-    </xs:sequence>
+    </xs:all>
   </xs:complexType>
 
   <xs:complexType name="games">
-    <xs:sequence>
+    <xs:choice>
       <xs:element name="game" type = "game" minOccurs="1" maxOccurs="5"/>
-    </xs:sequence>
+    </xs:choice>
   </xs:complexType>
 
   <xs:complexType name="films">
@@ -98,20 +100,26 @@
 
   <xs:complexType name="album">
     <xs:sequence>
+      <!--dodałem grupę-->
+      <xs:group ref="grupa">
+      </xs:group>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:group name="grupa">
+    <xs:sequence>
       <xs:element name="name" type = "xs:string" minOccurs="1"/>
       <xs:element name="price" type = "price" minOccurs="1"/>
       <xs:element name="artist" type = "xs:string" minOccurs="1"/>
       <xs:element name="length" type = "length" minOccurs="1"/>
       <xs:element name="genres" type = "genres" minOccurs="1">
-        <xs:unique name="genreUnique4">
+        <xs:unique name="genreUnique5">
           <xs:selector xpath="genre"/>
           <xs:field xpath="."/>
         </xs:unique>
       </xs:element>
     </xs:sequence>
-
-  </xs:complexType>
-
+  </xs:group>
   <xs:complexType name="genres">
     <xs:sequence>
       <xs:element name="genre" type = "xs:string" minOccurs="1" maxOccurs="unbounded"/>

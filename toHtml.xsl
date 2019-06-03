@@ -76,7 +76,8 @@
                             </th>
                                 <td>
                                     <xsl:value-of
-                                            select="format-number(sum(/products/games/game[developer = 'Bethesda']/price) div count(/products/games/game/price), '#.##')"/>
+                                            <!--dodałem ceiling-->
+                                            select="(ceiling(sum(/products/games/game[developer = 'Bethesda']/price) div count(/products/games/game/price)))"/>
                                 </td>
                             <th>
                             <xsl:text>

@@ -56,7 +56,7 @@
     <films>
         <film>
             <name>Bóg nie umarł</name>
-            <price currency="euro">14,88</price>
+            <price currency="euro">14.88</price>
             <director>Peter Jackson</director>
             <distributor>Universal</distributor>
             <length unit="minute">110</length>
@@ -87,7 +87,7 @@
         </film>
         <film>
             <name>Pitbull. Niebezpieczni Mężczyźni</name>
-            <price currency="euro">14,88</price>
+            <price currency="euro">148.8</price>
             <director>Patrick Vegas</director>
             <distributor>Vegas Productions</distributor>
             <length unit="minute">120</length>
@@ -98,7 +98,7 @@
         </film>
         <film>
             <name>Smerfy: Poszukiwacze zaginionej wioski</name>
-            <price currency="euro">14,88</price>
+            <price currency="euro">14.88</price>
             <director>James Gargamel</director>
             <distributor>Cauldron Productions</distributor>
             <length unit="minute">90</length>
@@ -130,7 +130,7 @@
         </e-book>
         <e-book>
             <name>Harri Potta</name>
-            <price currency="euro">14,88</price>
+            <price currency="euro">14.88</price>
             <author>J.K. Rowlong</author>
             <pages>416</pages>
             <genres>
@@ -142,7 +142,7 @@
     <music>
         <album>
             <name>W dzień triumfu nad złem</name>
-            <price currency="euro">121,88</price>
+            <price currency="euro">121.88</price>
             <artist>Honor</artist>
             <length unit="minute">90</length>
             <genres>
